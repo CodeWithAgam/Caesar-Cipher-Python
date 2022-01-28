@@ -13,19 +13,23 @@ def caesar(text, shift, direction):
 
     # This condition encrypts the message
     if direction == "encode":
-        for letter in text:
-            position = alphabets.index(letter)
+        for char in text:
+            if char in alphabets:
+                position = alphabets.index(char)
+                
+                new_position = position + shift
+                
+                final_text += alphabets[new_position]
             
-            new_position = position + shift
-            
-            final_text += alphabets[new_position]
+            else:
+                final_text += char 
         
         print(f"The encoded text is: {final_text}")
 
     # This condition decrypts the message
     elif direction == "decode":
-        for letter in text:
-            position = alphabets.index(letter)
+        for char in text:
+            position = alphabets.index(char)
             
             new_position = position - shift
             
