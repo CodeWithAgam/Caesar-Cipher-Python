@@ -27,7 +27,7 @@ def caesar(text, shift, direction):
             
             final_text += alphabets[new_position]
         
-        print(f"The encoded text is {final_text}")
+        print(f"The encoded text is: {final_text}")
 
     # This condition decrypts the message
     elif direction == "decode":
@@ -38,7 +38,7 @@ def caesar(text, shift, direction):
             
             final_text += alphabets[new_position]
         
-        print(f"The decoded text is {final_text}")
+        print(f"The decoded text is: {final_text}")
 
     else:
         print("Sorry, this function is not available. Maybe you made an Typo!")
